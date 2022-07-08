@@ -1,5 +1,7 @@
 module.exports = {
+  publicPath:"/vue-demo/",
   outputDir:"docs",
+  productionSourceMap:false,//删除打包的源文件
   devServer: {
     open: true,
     proxy: {

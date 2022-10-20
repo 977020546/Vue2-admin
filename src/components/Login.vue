@@ -42,17 +42,16 @@ export default {
       this.$refs[form].validate((valid) => {
         if (valid) {
           console.log(this.form);
-          /*   把这个登录方法封装成api进行调用
-          this.service.post("/login", this.form).then((res) => {
-            if (res.data.status === 200) {
-              setToken("username", res.data.username);
-              setToken("token", res.data.token);
-              this.$message({ message: res.data.message, type: "success" });
-              this.$router.push("/home");
-            }
-            console.log(res);
-          });
-        */
+          // 把这个登录方法封装成api进行调用;
+          // this.service.post("/login", this.form).then((res) => {
+          //   if (res.data.status === 200) {
+          //     setToken("username", res.data.username);
+          //     setToken("token", res.data.token);
+          //     this.$message({ message: "登录成功", type: "success" });
+          //     this.$router.push("/home");
+          //   }
+          //   console.log(res);
+          // });
           login(this.form).then((res) => {
             console.log(res);
             if (res.data.status === 200) {

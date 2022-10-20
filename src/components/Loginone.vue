@@ -68,6 +68,7 @@ export default {
                 this.$message({ message: res.data.message, type: "success" });
                 this.$router.push("/home");
               }
+              res.send();
             })
             .catch((err) => {
               console.log(err);

@@ -1,9 +1,15 @@
 import axios from "axios";
 import { getToken } from "./utils/setToken";
 import { Message } from "element-ui";
+import baseUrl from "./baseUrl";
+
+console.log("-------------------process---------------", process.env.NODE_ENV);
+console.log("-------------------env---------------", process.env);
 
 const service = axios.create({
-  baseURL: "/api", //baseURL会自动加在请求地址上
+  //开发环境下的执行操作
+  baseURL: baseUrl,
+  // baseURL: "/api", //baseURL会自动加在请求地址上
   timeout: 3000,
 });
 

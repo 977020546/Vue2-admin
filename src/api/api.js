@@ -82,7 +82,7 @@ export function worksList() {
 // 数据获取
 export function dataView(data) {
   return service({
-    method: "get",
+    method: "post",
     url: "/dataview",
     data,
   });
